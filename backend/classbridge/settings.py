@@ -46,6 +46,9 @@ INSTALLED_APPS = [
     # Local apps
     'apps.auth',
     'apps.schools',
+    'apps.classes',
+    'apps.subjects',
+    'apps.academic',
 ]
 
 AUTH_USER_MODEL = 'apps.auth.User'
