@@ -42,17 +42,13 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework_simplejwt',
     'corsheaders',
+    'drf_yasg',
     # Local apps
-    # 'apps.auth',
-    # 'apps.schools',
-    # 'apps.students',
-    # 'apps.teachers',
-    # 'apps.classes',
-    # 'apps.subjects',
-    # 'apps.assignments',
-    # 'apps.cbt',
-    # 'apps.results',
+    'apps.auth',
+    'apps.schools',
 ]
+
+AUTH_USER_MODEL = 'apps.auth.User'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -63,6 +59,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'classbridge.middleware.SchoolIsolationMiddleware',
 ]
 
 ROOT_URLCONF = 'classbridge.urls'
