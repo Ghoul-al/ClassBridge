@@ -6,5 +6,8 @@ urlpatterns = [
     path('classes/', include('apps.classes.urls')),
     path('subjects/', include('apps.subjects.urls')),
     path('academic/', include('apps.academic.urls')),
+    path('students/', include('apps.students.urls')),
+    path('teachers/', include('apps.teachers.urls')),
+    path('parents/', include('apps.parents.urls')),
     # Add other app URLs here
 ]

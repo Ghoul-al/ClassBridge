@@ -49,6 +49,9 @@ INSTALLED_APPS = [
     'apps.classes',
     'apps.subjects',
     'apps.academic',
+    'apps.students',
+    'apps.teachers',
+    'apps.parents',
 ]
 
 AUTH_USER_MODEL = 'apps.auth.User'
