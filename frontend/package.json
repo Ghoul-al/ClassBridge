@@ -18,7 +18,8 @@
     "autoprefixer": "^10.4.19",
     "postcss": "^8.4.38",
     "lucide-react": "^0.378.0",
-    "@shadcn/ui": "^0.0.4"
+    "@shadcn/ui": "^0.0.4",
+    "@tanstack/react-query": "^5.45.0"
   },
   "devDependencies": {
     "typescript": "^5",
