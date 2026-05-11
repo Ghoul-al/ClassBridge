@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     'apps.teachers',
     'apps.parents',
     'apps.learning',
+    'apps.cbt',
 ]
 
 AUTH_USER_MODEL = 'apps.auth.User'

@@ -1,7 +1,7 @@
 'use client'
 
 import { useQuery } from '@tanstack/react-query'
-import axios from 'axios'
+import { getAssignments } from '../../lib/api/assignments'
 
 interface Assignment {
   id: string
@@ -16,10 +16,7 @@ interface Assignment {
 export function AssignmentList() {
   const { data: assignments, isLoading, error } = useQuery({
     queryKey: ['assignments'],
-    queryFn: async () => {
-      const response = await axios.get('/api/assignments/')
-      return response.data
-    },
+    queryFn: getAssignments,
   })
 
   if (isLoading) return <div>Loading assignments...</div>

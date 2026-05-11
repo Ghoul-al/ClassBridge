@@ -10,5 +10,6 @@ urlpatterns = [
     path('teachers/', include('apps.teachers.urls')),
     path('parents/', include('apps.parents.urls')),
     path('learning/', include('apps.learning.urls')),
+    path('cbt/', include('apps.cbt.urls')),
     # Add other app URLs here
 ]
