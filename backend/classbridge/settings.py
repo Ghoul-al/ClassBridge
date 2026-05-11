@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'apps.students',
     'apps.teachers',
     'apps.parents',
+    'apps.learning',
 ]
 
 AUTH_USER_MODEL = 'apps.auth.User'
@@ -199,3 +200,10 @@ CORS_ALLOWED_ORIGINS = [
 # Celery Configuration
 CELERY_BROKER_URL = os.environ.get('REDIS_URL', 'redis://redis:6379/0')
 CELERY_RESULT_BACKEND = os.environ.get('REDIS_URL', 'redis://redis:6379/0')
+
+# MinIO Configuration
+MINIO_ENDPOINT = os.environ.get('MINIO_ENDPOINT', 'minio:9000')
+MINIO_ACCESS_KEY = os.environ.get('MINIO_ACCESS_KEY', 'admin')
+MINIO_SECRET_KEY = os.environ.get('MINIO_SECRET_KEY', 'password123')
+MINIO_BUCKET_NAME = os.environ.get('MINIO_BUCKET_NAME', 'classbridge-files')
+MINIO_SECURE = os.environ.get('MINIO_SECURE', 'False') == 'True'
